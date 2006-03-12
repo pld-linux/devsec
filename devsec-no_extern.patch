@@ -1,0 +1,11 @@
+--- ./devsec/tsrep3/server/tsrep3/gui/gui_main.cpp.org	2005-10-26 03:36:29.000000000 +0000
++++ ./devsec/tsrep3/server/tsrep3/gui/gui_main.cpp	2006-03-11 23:28:25.000000000 +0000
+@@ -16,7 +16,7 @@
+ 
+ #include "memcpy.h"
+ 
+-extern int v4l_pipe;
++int v4l_pipe = -1;
+ 
+ MessageHandler *pMsg = NULL;
+ Socket *pSocket = NULL;
