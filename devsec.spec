@@ -5,8 +5,8 @@
 # - add webapps configuration
 # - move camera configs to /etc
 #
-# Conditional build:
 Summary:	Devolution Security - video surveillance system for the Linux/X11 platform
+Summary(pl):	Devolution Security - system do nadzoru obrazu dla platformy Linux/X11
 Name:		devsec
 Version:	3.0.6
 Release:	0.2
@@ -35,15 +35,15 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_webapps	/etc/webapps
 %define		_webapp		%{name}
-%define		_webappdir	%{_prefix}/lib/cgi-bin/%{_webapp}
+%define		_webappdir	%{_prefix}/lib/%{_webapp}
 
 %description
-Devolution Security is a video surveillance system for the Linux/X11 platform.
-Features:
+Devolution Security is a video surveillance system for the Linux/X11
+platform. Features:
  - Up to 16 cameras
  - Motion detection
  - Record on motion detection
- - Record up to 25 fps mpeg4 video
+ - Record up to 25 fps MPEG4 video
  - Multicast live streams to local network
  - Unicast to internet IP address
  - Very configurable
@@ -51,44 +51,67 @@ Features:
  - Configurable helper buttons
  - Web based interface
 
+%description -l pl
+Devolution Security to system do nadzoru obrazu dla platformy
+Linux/X11. Mo¿liwo¶ci:
+ - do 16 kamer
+ - wykrywanie ruchu
+ - nagrywanie przy wykryciu ruchu
+ - nagrywanie obrazu MPEG4 do 25 klatek/sekundê
+ - udostêpnianie strumieni na ¿ywo w sieci lokalnej
+ - kierowanie strumienia na internetowy adres IP
+ - du¿a konfigurowalno¶æ
+ - interfejs X11 z obs³ug± motywów
+ - konfigurowalne przyciski pomocnicze
+ - interfejs WWW
+
 %package cgi
-Summary:	cgi files for devsec
+Summary:	Web based interface for Devolution Security
+Summary(pl):	Interfejs WWW do Devolution Security
 Group:		Applications/WWW
 Requires:       %{name} = %{version}-%{release}
 Requires:	webapps
 
 %description cgi
+Web based interface for Devolution Security.
+
+%description cgi -l pl
+Interfejs WWW do Devolution Security.
 
 %package libs
-Summary:        libraries for devsec
-Summary(pl):    Biblioteki do devsec
+Summary:        Devolution Security libraries
+Summary(pl):    Biblioteki Devolution Security
 Group:          Libraries
 
 %description libs
-Libraries for Devolution Security.
+Devolution Security libraries.
 
 %description libs -l pl
-Biblioteki dla Devolution Security.
+Biblioteki Devolution Security.
 
 %package devel
-Summary:        Developement files for devsec
+Summary:        Header files for Devolution Security libraries
+Summary(pl):	Pliki nag³ówkowe bibliotek Devolution Security
 Group:          Development/Libraries
 Requires:       %{name}-libs = %{version}-%{release}
 
 %description devel
-Developement files for devsec.
+Header files for Devolution Security libraries.
+
+%description devel -l pl
+Pliki nag³ówkowe bibliotek Devolution Security.
 
 %package static
-Summary:        Static libraries for devsec
-Summary(pl):    Statyczne biblioteki devsec
+Summary:        Static Devolution Security libraries
+Summary(pl):    Statyczne biblioteki Devolution Security
 Group:          Development/Libraries
 Requires:       %{name}-devel = %{version}-%{release}
 
 %description static
-Static library for devsec.
+Static Devolution Security libraries.
 
 %description static -l pl
-Statyczne biblioteki devsec.
+Statyczne biblioteki Devolution Security.
 
 %prep
 %setup -q
@@ -128,8 +151,8 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/dtk/config/%{name}/mp4live
 %config(noreplace) %verify(not md5 mtime size) %{_libdir}/dtk/config/%{name}/mp4live/*.conf
 %dir %{_libdir}/dtk/skins
+%attr(755,root,root) %{_libdir}/dtk/skins/*.so
 %{_libdir}/dtk/skins/*.la
-%{_libdir}/dtk/skins/*.so
 %dir %{_pixmapsdir}/%{name}
 %{_pixmapsdir}/%{name}/*.png
 %{_pixmapsdir}/%{name}/*.yuv
@@ -150,6 +173,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/lib*.so
 %{_libdir}/*.la
 %{_includedir}/*.h
 
