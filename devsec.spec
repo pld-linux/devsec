@@ -79,9 +79,9 @@ Web based interface for Devolution Security.
 Interfejs WWW do Devolution Security.
 
 %package libs
-Summary:        Devolution Security libraries
-Summary(pl):    Biblioteki Devolution Security
-Group:          Libraries
+Summary:	Devolution Security libraries
+Summary(pl):	Biblioteki Devolution Security
+Group:		Libraries
 
 %description libs
 Devolution Security libraries.
@@ -90,10 +90,10 @@ Devolution Security libraries.
 Biblioteki Devolution Security.
 
 %package devel
-Summary:        Header files for Devolution Security libraries
+Summary:	Header files for Devolution Security libraries
 Summary(pl):	Pliki nag³ówkowe bibliotek Devolution Security
-Group:          Development/Libraries
-Requires:       %{name}-libs = %{version}-%{release}
+Group:		Development/Libraries
+Requires:	%{name}-libs = %{version}-%{release}
 
 %description devel
 Header files for Devolution Security libraries.
@@ -102,10 +102,10 @@ Header files for Devolution Security libraries.
 Pliki nag³ówkowe bibliotek Devolution Security.
 
 %package static
-Summary:        Static Devolution Security libraries
-Summary(pl):    Statyczne biblioteki Devolution Security
-Group:          Development/Libraries
-Requires:       %{name}-devel = %{version}-%{release}
+Summary:	Static Devolution Security libraries
+Summary(pl):	Statyczne biblioteki Devolution Security
+Group:		Development/Libraries
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static Devolution Security libraries.
