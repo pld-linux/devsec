@@ -6,7 +6,7 @@
 # - move camera configs to /etc
 #
 Summary:	Devolution Security - video surveillance system for the Linux/X11 platform
-Summary(pl):	Devolution Security - system do nadzoru obrazu dla platformy Linux/X11
+Summary(pl.UTF-8):   Devolution Security - system do nadzoru obrazu dla platformy Linux/X11
 Name:		devsec
 Version:	3.0.6
 Release:	0.2
@@ -51,23 +51,23 @@ platform. Features:
  - Configurable helper buttons
  - Web based interface
 
-%description -l pl
+%description -l pl.UTF-8
 Devolution Security to system do nadzoru obrazu dla platformy
-Linux/X11. Mo¿liwo¶ci:
+Linux/X11. MoÅ¼liwoÅ›ci:
  - do 16 kamer
  - wykrywanie ruchu
  - nagrywanie przy wykryciu ruchu
- - nagrywanie obrazu MPEG4 do 25 klatek/sekundê
- - udostêpnianie strumieni na ¿ywo w sieci lokalnej
+ - nagrywanie obrazu MPEG4 do 25 klatek/sekundÄ™
+ - udostÄ™pnianie strumieni na Å¼ywo w sieci lokalnej
  - kierowanie strumienia na internetowy adres IP
- - du¿a konfigurowalno¶æ
- - interfejs X11 z obs³ug± motywów
+ - duÅ¼a konfigurowalnoÅ›Ä‡
+ - interfejs X11 z obsÅ‚ugÄ… motywÃ³w
  - konfigurowalne przyciski pomocnicze
  - interfejs WWW
 
 %package cgi
 Summary:	Web based interface for Devolution Security
-Summary(pl):	Interfejs WWW do Devolution Security
+Summary(pl.UTF-8):   Interfejs WWW do Devolution Security
 Group:		Applications/WWW
 Requires:       %{name} = %{version}-%{release}
 Requires:	webapps
@@ -75,42 +75,42 @@ Requires:	webapps
 %description cgi
 Web based interface for Devolution Security.
 
-%description cgi -l pl
+%description cgi -l pl.UTF-8
 Interfejs WWW do Devolution Security.
 
 %package libs
 Summary:	Devolution Security libraries
-Summary(pl):	Biblioteki Devolution Security
+Summary(pl.UTF-8):   Biblioteki Devolution Security
 Group:		Libraries
 
 %description libs
 Devolution Security libraries.
 
-%description libs -l pl
+%description libs -l pl.UTF-8
 Biblioteki Devolution Security.
 
 %package devel
 Summary:	Header files for Devolution Security libraries
-Summary(pl):	Pliki nag³ówkowe bibliotek Devolution Security
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe bibliotek Devolution Security
 Group:		Development/Libraries
 Requires:	%{name}-libs = %{version}-%{release}
 
 %description devel
 Header files for Devolution Security libraries.
 
-%description devel -l pl
-Pliki nag³ówkowe bibliotek Devolution Security.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe bibliotek Devolution Security.
 
 %package static
 Summary:	Static Devolution Security libraries
-Summary(pl):	Statyczne biblioteki Devolution Security
+Summary(pl.UTF-8):   Statyczne biblioteki Devolution Security
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static Devolution Security libraries.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczne biblioteki Devolution Security.
 
 %prep
