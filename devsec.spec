@@ -6,7 +6,7 @@
 # - move camera configs to /etc
 #
 Summary:	Devolution Security - video surveillance system for the Linux/X11 platform
-Summary(pl.UTF-8):   Devolution Security - system do nadzoru obrazu dla platformy Linux/X11
+Summary(pl.UTF-8):	Devolution Security - system do nadzoru obrazu dla platformy Linux/X11
 Name:		devsec
 Version:	3.0.6
 Release:	0.2
@@ -67,7 +67,7 @@ Linux/X11. Możliwości:
 
 %package cgi
 Summary:	Web based interface for Devolution Security
-Summary(pl.UTF-8):   Interfejs WWW do Devolution Security
+Summary(pl.UTF-8):	Interfejs WWW do Devolution Security
 Group:		Applications/WWW
 Requires:       %{name} = %{version}-%{release}
 Requires:	webapps
@@ -80,7 +80,7 @@ Interfejs WWW do Devolution Security.
 
 %package libs
 Summary:	Devolution Security libraries
-Summary(pl.UTF-8):   Biblioteki Devolution Security
+Summary(pl.UTF-8):	Biblioteki Devolution Security
 Group:		Libraries
 
 %description libs
@@ -91,7 +91,7 @@ Biblioteki Devolution Security.
 
 %package devel
 Summary:	Header files for Devolution Security libraries
-Summary(pl.UTF-8):   Pliki nagłówkowe bibliotek Devolution Security
+Summary(pl.UTF-8):	Pliki nagłówkowe bibliotek Devolution Security
 Group:		Development/Libraries
 Requires:	%{name}-libs = %{version}-%{release}
 
@@ -103,7 +103,7 @@ Pliki nagłówkowe bibliotek Devolution Security.
 
 %package static
 Summary:	Static Devolution Security libraries
-Summary(pl.UTF-8):   Statyczne biblioteki Devolution Security
+Summary(pl.UTF-8):	Statyczne biblioteki Devolution Security
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
